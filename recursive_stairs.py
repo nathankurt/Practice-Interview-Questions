@@ -90,7 +90,7 @@ num_ways(N) = (num_ways(n - 1) + num_ways(n - 3) + num_ways(n-5))
 """
 
 def num_ways_set(stairs, steps):
-    if stairs == 1 or stairs == 0:
+    if stairs == 0:
         return 1
     #Oh man look at that list comprehension
     return sum([num_ways(stairs - x) for x in steps])
@@ -102,3 +102,25 @@ print("num_ways_set(15, [1,3,5]):", num_ways_set(15, [1,3,5]) )
 #returns 932
 
 print("num_ways_set(10, [1,2])", num_ways_set(10, [1,2]))
+
+
+def num_ways_set_bottom_up(stairs, steps):
+    if stairs == 0: return 1
+    nums = [None for _ in range(stairs+1)]
+    nums[0] = 1
+    for i in range(1,stairs+1):
+        total = 0
+        for j in steps:
+            if i - j >= 0:
+                total += nums[i-j]
+        nums[i] = total
+    return nums[stairs] 
+
+
+print("num_ways_set_bottom_up(10, [1,3,5]):", num_ways_set_bottom_up(10, [1,3,5]) )
+#returns 84
+
+print("num_ways_setbottom_up(15, [1,3,5]):", num_ways_set_bottom_up(15, [1,3,5]) )
+#returns 932
+
+print("num_ways_set_bottom_up(10, [1,2])", num_ways_set_bottom_up(10, [1,2]))
