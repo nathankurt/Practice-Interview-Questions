@@ -1,7 +1,9 @@
 # Practice-Interview-Questions
+
 Just a bunch of practice interview questions that i'll work on.
 
 ## Amazon Coding Interview Question - Recursive Staircase Problem
+
 This question asks you to find the number of ways you can go up a staircase given the size of the staircase and knowing you can only take one or two steps at a time like so.
 
 ![image](https://user-images.githubusercontent.com/9864281/42898075-1cf45ef4-8a90-11e8-864e-28d6df33c777.png)
