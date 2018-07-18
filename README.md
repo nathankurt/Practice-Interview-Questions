@@ -10,3 +10,17 @@ The next part of the problem asks you how you would do it if you were given a se
 
 [source](https://www.youtube.com/watch?v=5o-kdjv7FD0)
 
+## Google Coding Interview Question - First Recurring Character
+
+This question asks you to find the first repeating character given a string of characters like so:
+
+```text
+"ABCA" -> "A"
+"HELLO" -> "L"
+"COW" -> "NONE"
+"DBCABA" -> "B"
+```
+
+![image](https://user-images.githubusercontent.com/9864281/42902848-ebccf972-8a9d-11e8-80b7-9b9a293a73a3.png)
+
+[source](https://www.youtube.com/watch?v=GJdiM-muYqc)
