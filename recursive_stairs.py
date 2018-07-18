@@ -134,13 +134,15 @@ def num_ways_set_bottom_up(stairs, steps):
 
 print("\n\nNUM WAY WITH SET BOTTOM UP ROUTE")
 print("num_ways_set_bottom_up(4, [1,3,5]):", num_ways_set_bottom_up(4, [1,3,5]) )
+#returns 3
 
 print("num_ways_set_bottom_up(5, [1,3,5]):", num_ways_set_bottom_up(5, [1,3,5]) )
+#returns 5
 
 print("num_ways_set_bottom_up(10, [1,3,5]):", num_ways_set_bottom_up(10, [1,3,5]) )
-#returns 84
+#returns 47
 
 print("num_ways_setbottom_up(15, [1,3,5]):", num_ways_set_bottom_up(15, [1,3,5]) )
-#returns 932
+#returns 449
 
 print("num_ways_set_bottom_up(10, [1,2])", num_ways_set_bottom_up(10, [1,2]))
