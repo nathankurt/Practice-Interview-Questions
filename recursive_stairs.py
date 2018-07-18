@@ -43,6 +43,8 @@ def num_ways(stairs):
     else:
         return (num_ways(stairs - 1) + num_ways(stairs - 2))
 
+print("\n\nNUM WAY WITH 1 OR 2 SET BOTTOM UP ROUTE")
+
 print("num_ways(4): ", num_ways(4))
 #Returns 5
 
@@ -61,19 +63,17 @@ def num_ways_bottom_up(stairs):
     if stairs == 1 or stairs == 0:
         return 1
     #look at that fancy match case to make an empty list filled with 10 nums 
-    nums = [None for _ in range(stairs+1)]
-    nums[0] = 1
-    nums[1] = 1
+    nums = [1,1]
     for i in range(2,stairs+1):
-        nums[i] = nums[i-1] + nums[i-2]
+        nums.append(nums[i-1] + nums[i-2])
     return nums[stairs]
         
-        
+print("\n\nNUM WAY WITH 1 OR 2 SET BOTTOM UP ROUTE")
 
 print("num_ways_bottom_up(4): ", num_ways_bottom_up(4))
 #Returns 5
 
-print("num_ways_bottom_up(10): ",  num_ways_bottom_up(5))
+print("num_ways_bottom_up(5): ",  num_ways_bottom_up(5))
 #Returns 8
 
 print("num_ways_bottom_up(10): ", num_ways_bottom_up(10))
@@ -92,18 +92,33 @@ num_ways(N) = (num_ways(n - 1) + num_ways(n - 3) + num_ways(n-5))
 def num_ways_set(stairs, steps):
     if stairs == 0:
         return 1
-    #Oh man look at that list comprehension
-    return sum([num_ways(stairs - x) for x in steps])
+    else:
+        #Oh man look at that list comprehension
+        return sum([num_ways_set((stairs - x),steps) for x in steps if (stairs - x >= 0)])
+
+
+print("\n\nNUM WAY WITH SET LIST COMPREHENSION ROUTE")
+print("num_ways_set(4, [1,2]):", num_ways_set(4, [1,2]) )
+#returns 5
+
+print("num_ways_set(5, [1,3]):", num_ways_set(5, [1,3,5]) )
+#returns 5
+
+print("num_ways_set(5, [1,3,5]):", num_ways_set(5, [1,3,5]) )
+#returns 5
 
 print("num_ways_set(10, [1,3,5]):", num_ways_set(10, [1,3,5]) )
-#returns 84
+#returns 47
 
 print("num_ways_set(15, [1,3,5]):", num_ways_set(15, [1,3,5]) )
-#returns 932
+#returns 449
 
 print("num_ways_set(10, [1,2])", num_ways_set(10, [1,2]))
+#returns 89
 
 
+
+"The above is bulky in a way similar to the other one where it has to call the function over and over again"
 def num_ways_set_bottom_up(stairs, steps):
     if stairs == 0: return 1
     nums = [None for _ in range(stairs+1)]
@@ -116,6 +131,11 @@ def num_ways_set_bottom_up(stairs, steps):
         nums[i] = total
     return nums[stairs] 
 
+
+print("\n\nNUM WAY WITH SET BOTTOM UP ROUTE")
+print("num_ways_set_bottom_up(4, [1,3,5]):", num_ways_set_bottom_up(4, [1,3,5]) )
+
+print("num_ways_set_bottom_up(5, [1,3,5]):", num_ways_set_bottom_up(5, [1,3,5]) )
 
 print("num_ways_set_bottom_up(10, [1,3,5]):", num_ways_set_bottom_up(10, [1,3,5]) )
 #returns 84
