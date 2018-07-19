@@ -36,3 +36,13 @@ Given a list of tuples like `points_tuple = [(-2,4), (0,-2), (-1,0), (2,5), (-2,
 <img width="1220" alt="image" src="https://user-images.githubusercontent.com/9864281/42920362-3e2c3980-8ae4-11e8-9481-c51328fbd176.png">
 
 [source](https://www.youtube.com/watch?v=eaYX0Ee0Kcg)
+
+## Daily Coding Problems
+
+### Problem 1(7/19/18)
+
+Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
+
+For example, given `[10, 15, 3, 7]` and `k of 17`, `return true` since 10 + 7 is 17.
+
+**Bonus**: Can you do this in one pass?

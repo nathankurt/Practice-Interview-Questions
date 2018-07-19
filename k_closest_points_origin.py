@@ -46,6 +46,9 @@ print("\n This seems like the most pythonic way of doing it!")
 print("Closest 3 Points: ", closest_points_zip(points_tuple, 3))
 print("Closest 4 Points: ", closest_points_zip(points_tuple, 4))
 
+"""
+Doing this with classes seems probably like the cleanest way to do this. 
+"""
 class Point:
     def __init__(self, tup):
         self.coords = tup
@@ -58,5 +61,3 @@ def closest_points_class(tuple_list, k):
 print("\n This is the way to do it with a class that works well")
 print("Closest 3 Points: ", closest_points_class(points_tuple, 3))
 print("Closest 4 Points: ", closest_points_class(points_tuple, 4))
-
-
