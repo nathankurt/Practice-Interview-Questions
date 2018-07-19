@@ -71,3 +71,4 @@ print("check_sum_one_pass(%s,%s):" % (ls_fail,8),check_sum_one_pass(ls_fail, 8))
 #should return false
 print("check_sum_one_pass(%s,%s):" % (ls_big,8),check_sum_one_pass(ls_big, 8))
 #should return true
+print("check_sum_one_pass(%s,%s):" % (ls_big,10),check_sum_one_pass(ls_big, 10))
