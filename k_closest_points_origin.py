@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-
+#TODO Add max heap sort integration
 from math import sqrt
 """
 Given a list of tuples find the k closest points to the origin(0,0)
@@ -8,7 +8,6 @@ IE
 Points = [(-2,4), (0,-2), (-1,0), (2,5), (-2,-3), (3,2)]
 Find the 2 closest points to the origin
 two closest points here are (-1,0) and (0,-2) so list those
-
 """
 
 points_tuple = [(-2,4), (0,-2), (-1,0), (2,5), (-2,-3), (3,2), (1,0)]
@@ -17,7 +16,7 @@ points_tuple = [(-2,4), (0,-2), (-1,0), (2,5), (-2,-3), (3,2), (1,0)]
 ###Used to get the distance from origin. which is hypotenuse so x^2 + y^2
 def distance(tup):
     return (sqrt(tup[0]**2 + tup[1] **2))
-    "could also just do **.5 instead of sqrt"
+    #could also just do **.5 instead of sqrt
 
 """
 I'm not sure if this works if there are two points that are the same distance away, may be better to use zip
@@ -59,4 +58,5 @@ def closest_points_class(tuple_list, k):
 print("\n This is the way to do it with a class that works well")
 print("Closest 3 Points: ", closest_points_class(points_tuple, 3))
 print("Closest 4 Points: ", closest_points_class(points_tuple, 4))
-        
+
+
