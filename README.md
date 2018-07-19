@@ -31,9 +31,9 @@ This question asks you to find the first repeating character given a string of c
 
 Given a list of tuples like `points_tuple = [(-2,4), (0,-2), (-1,0), (2,5), (-2,-3), (3,2), (1,0)]` find the k closest points to origin. So in this case, if `k=2` then the k closest points would be `(-1,0)` and `(0,-2)`
 
-<img width="1296" alt="image" src="https://user-images.githubusercontent.com/9864281/42920205-87265522-8ae3-11e8-933e-45b078b9b653.png">
+![image](https://user-images.githubusercontent.com/9864281/42920205-87265522-8ae3-11e8-933e-45b078b9b653.png)
 
-<img width="1220" alt="image" src="https://user-images.githubusercontent.com/9864281/42920362-3e2c3980-8ae4-11e8-9481-c51328fbd176.png">
+![image](https://user-images.githubusercontent.com/9864281/42920362-3e2c3980-8ae4-11e8-9481-c51328fbd176.png)
 
 [source](https://www.youtube.com/watch?v=eaYX0Ee0Kcg)
 
