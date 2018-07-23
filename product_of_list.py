@@ -84,8 +84,3 @@ def products(nums):
         else:
             result.append(prefix_products[i - 1] * suffix_products[i + 1])
     return result
-
-
-
-
-

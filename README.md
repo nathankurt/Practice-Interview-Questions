@@ -2,15 +2,15 @@
 
 Just a bunch of practice interview questions that i'll work on.
 
-## Go To:
+## Go To
 
 * [Amazon Coding Interview Question - Recursive Staircase Problem](#amazon-coding-interview-question---recursive-staircase-problem)
 * [Google Coding Interview Question - First Recurring Character](#google-coding-interview-question---first-recurring-character)
 * [Daily Coding Problems](#daily-coding-problems)
-    * [Problem 1: Any Two Numbers == K](#(7/19/18)-problem-1)
-    * [Problem 2: Return New List with Product of List Except Ith Index](#(7/20/18)-problem-2)
-    * [Problem 3: Serialize/Desiralize BST Node](#(7/23/18)-problem-3)
-    * [Problem 4: Find Missing Integer](#(7/23/18)-problem-4)
+  * [Problem 1: Any Two Numbers == K](#(7/19/18)-problem-1)
+  * [Problem 2: Return New List with Product of List Except Ith Index](#(7/20/18)-problem-2)
+  * [Problem 3: Serialize/Desiralize BST Node](#(7/23/18)-problem-3)
+  * [Problem 4: Find Missing Integer](#(7/23/18)-problem-4)
 
 ## Amazon Coding Interview Question - Recursive Staircase Problem
 
@@ -124,7 +124,7 @@ assert deserialize(serialize(node)).left.left.val == 'left.left'
 
 #### Problem 3 Solution
 
-There are many ways to serialize and deserialize a binary tree, 
+There are many ways to serialize and deserialize a binary tree,
 so don't worry if your solution differs from this one.
 We will be only going through one possible solution.
 
