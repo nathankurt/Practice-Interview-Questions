@@ -2,6 +2,16 @@
 
 Just a bunch of practice interview questions that i'll work on.
 
+## Go To:
+
+* [Amazon Coding Interview Question - Recursive Staircase Problem](#amazon-coding-interview-question---recursive-staircase-problem)
+* [Google Coding Interview Question - First Recurring Character](#google-coding-interview-question---first-recurring-character)
+* [Daily Coding Problems](#daily-coding-problems)
+    * [Problem 1: Any Two Numbers == K](#(7/19/18)-problem-1)
+    * [Problem 2: Return New List with Product of List Except Ith Index](#(7/20/18)-problem-2)
+    * [Problem 3: Serialize/Desiralize BST Node](#(7/23/18)-problem-3)
+    * [Problem 4: Find Missing Integer](#(7/23/18)-problem-4)
+
 ## Amazon Coding Interview Question - Recursive Staircase Problem
 
 This question asks you to find the number of ways you can go up a staircase given the size of the staircase and knowing you can only take one or two steps at a time like so.
@@ -11,6 +21,8 @@ This question asks you to find the number of ways you can go up a staircase give
 The next part of the problem asks you how you would do it if you were given a set of steps that you could take. So for example given the set `X = {1,3,5}` that means you can only take 1 step, 3 steps, or 5 steps at a time. And then you have to figure out the number of ways to solve this problem.  
 
 [source](https://www.youtube.com/watch?v=5o-kdjv7FD0)
+
+[Return To Top](#go-to)
 
 ## Google Coding Interview Question - First Recurring Character
 
@@ -27,6 +39,8 @@ This question asks you to find the first repeating character given a string of c
 
 [source](https://www.youtube.com/watch?v=GJdiM-muYqc)
 
+[Return To Top](#go-to)
+
 ## Amazon Coding Interview Question - K Closest Points to the Origin
 
 Given a list of tuples like `points_tuple = [(-2,4), (0,-2), (-1,0), (2,5), (-2,-3), (3,2), (1,0)]` find the k closest points to origin. So in this case, if `k=2` then the k closest points would be `(-1,0)` and `(0,-2)`
@@ -36,6 +50,8 @@ Given a list of tuples like `points_tuple = [(-2,4), (0,-2), (-1,0), (2,5), (-2,
 ![image](https://user-images.githubusercontent.com/9864281/42920362-3e2c3980-8ae4-11e8-9481-c51328fbd176.png)
 
 [source](https://www.youtube.com/watch?v=eaYX0Ee0Kcg)
+
+[Return To Top](#go-to)
 
 ## Daily Coding Problems
 
@@ -47,7 +63,9 @@ For example, given `[10, 15, 3, 7]` and `k of 17`, `return true` since 10 + 7 is
 
 **Bonus**: Can you do this in one pass?
 
-#### Solution
+[Return To Top](#go-to)
+
+#### Problem 1 Solution
 
 This problem can be solved in several different ways.
 
@@ -57,6 +75,8 @@ This problem can be solved in several different ways.
 
 3. Yet another solution involves sorting the list. We can then iterate through the list and run a binary search on K - lst[i]. Since we run binary search on N elements, this would take O(N log N) with O(1) space.
 
+[Return To Top](#go-to)
+
 ### (7/20/18) Problem 2
 
 Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.
@@ -65,7 +85,9 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 
 **Follow-up:** What if you can't use division?
 
-#### Solution
+[Return To Top](#go-to)
+
+#### Problem 2 Solution
 
 This problem would be easy with division: an optimal solution could just find the product of all numbers in the array and then divide by each of the numbers.
 
@@ -74,6 +96,8 @@ Without division, another approach would be to first see that the ith element si
 In order to find the product of numbers before i, we can generate a list of prefix products. Specifically, the ith element in the list would be a product of all numbers including i. Similarly, we would generate the list of suffix products.
 
 This runs in O(N) time and space, since iterating over the input arrays takes O(N) time and creating the prefix and suffix arrays take up O(N) space.
+
+[Return To Top](#go-to)
 
 ### (7/23/18) Problem 3
 
@@ -96,8 +120,9 @@ node = Node('root', Node('left', Node('left.left')), Node('right'))
 assert deserialize(serialize(node)).left.left.val == 'left.left'
 ```
 
-#### Solution
+[Return To Top](#go-to)
 
+#### Problem 3 Solution
 
 There are many ways to serialize and deserialize a binary tree, 
 so don't worry if your solution differs from this one.
@@ -113,3 +138,17 @@ where the empty brackets denote nulls.
 To minimize data over the hypothetical wire, we could go a step further and prune out
 some unnecessary brackets. We could also replace the 2-character `()` with `#`. We can then infer leaf nodes by their form
 `val # #` and thus get the structure of the tree that way. Then our tree would look like `1 2 # # 3 # #`.
+
+[Return To Top](#go-to)
+
+### (7/23/18) Problem 4
+
+Given an array of integers, find the first missing positive integer in linear time and constant space. In other words, find the lowest positive integer that does not exist in the array. The array can contain duplicates and negative numbers as well.
+
+For example, the input `[3, 4, -1, 1]` should give `2`
+
+The input `[1, 2, 0]` should give `3`.
+
+You can modify the input array in-place.
+
+[Return To Top](#go-to)
