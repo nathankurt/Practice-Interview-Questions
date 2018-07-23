@@ -113,4 +113,3 @@ where the empty brackets denote nulls.
 To minimize data over the hypothetical wire, we could go a step further and prune out
 some unnecessary brackets. We could also replace the 2-character `()` with `#`. We can then infer leaf nodes by their form
 `val # #` and thus get the structure of the tree that way. Then our tree would look like `1 2 # # 3 # #`.
-
