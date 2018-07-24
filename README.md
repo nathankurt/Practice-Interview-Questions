@@ -153,7 +153,7 @@ You can modify the input array in-place.
 
 [Return To Top](#go-to)
 
-### Problem 4 Solution
+#### Problem 4 Solution
 
 The solution is way more complicated but doesn't use any extra space
 
@@ -181,3 +181,41 @@ Another way we can do this is by adding all the numbers to a set, and then use a
 Then continuously increment the counter and check whether the value is in the set.
 
 [Return To Top](#go-to)
+
+### (7/24/18) Problem 5
+
+`cons(a, b)` constructs a pair, and `car(pair)` and `cdr(pair)` returns the first and last element of that pair. For example, `car(cons(3, 4))` returns 3, and `cdr(cons(3, 4))` returns 4.
+
+Given this implementation of cons:
+```python
+def cons(a, b):
+    def pair(f):
+        return f(a, b)
+    return pair
+```
+
+Implement `car` and `cdr`.
+
+#### Problem 5 Solution
+
+This is a really cool example of using [closures](https://en.wikipedia.org/wiki/Closure_(computer_programming)) to store data. We must look at the signature type of cons to retrieve its first and last elements. `cons` takes in `a` and `b`, and returns a new anonymous function, which itself takes in `f`, and calls `f` with `a` and `b`. So the input to `car` and `cdr` is that anonymous function, which is `pair`. To get `a` and `b` back, we must feed it yet another function, one that takes in two parameters and returns the first (if car) or last (if cdr) one.
+
+so it ends up something like this:
+
+```python
+def car_answer(pair):
+    return pair(lambda a, b: a)
+
+def cdr_answer(pair):
+    return pair(lambda a, b: b)
+```
+
+or you can use the `__closure__` method and call the first value in the cell
+
+```python
+def car_my(pair):
+    return pair.__closure__[0].cell_contents
+
+def cdr_my(pair):
+    return pair.__closure__[1].cell_contents
+```
