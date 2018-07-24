@@ -11,6 +11,8 @@ Just a bunch of practice interview questions that i'll work on.
   * [Problem 2: Return New List with Product of List Except Ith Index](#(7/20/18)-problem-2)
   * [Problem 3: Serialize/Desiralize BST Node](#(7/23/18)-problem-3)
   * [Problem 4: Find Missing Integer](#(7/23/18)-problem-4)
+  * [Problem 5: Closure Pair](#(7/24/18)-problem-5)
+  * [Problem 6: XOR Linked List](#(7/24/18)-problem-6)
 
 ## Amazon Coding Interview Question - Recursive Staircase Problem
 
@@ -187,6 +189,7 @@ Then continuously increment the counter and check whether the value is in the se
 `cons(a, b)` constructs a pair, and `car(pair)` and `cdr(pair)` returns the first and last element of that pair. For example, `car(cons(3, 4))` returns 3, and `cdr(cons(3, 4))` returns 4.
 
 Given this implementation of cons:
+
 ```python
 def cons(a, b):
     def pair(f):
@@ -195,6 +198,8 @@ def cons(a, b):
 ```
 
 Implement `car` and `cdr`.
+
+[Return To Top](#go-to)
 
 #### Problem 5 Solution
 
@@ -219,3 +224,13 @@ def car_my(pair):
 def cdr_my(pair):
     return pair.__closure__[1].cell_contents
 ```
+
+[Return To Top](#go-to)
+
+### (7/24/18) Problem 6
+
+An XOR linked list is a more memory efficient doubly linked list. Instead of each node holding next and prev fields, it holds a field named both, which is an XOR of the next node and the previous node. Implement an XOR linked list; it has an add(element) which adds the element to the end, and a get(index) which returns the node at index.
+
+If using a language that has no pointers (such as Python), you can assume you have access to get_pointer and dereference_pointer functions that converts between nodes and memory addresses.
+
+[Return To Top](#go-to)
