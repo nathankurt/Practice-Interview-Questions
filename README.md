@@ -13,6 +13,7 @@ te
   * [Problem 4: Find Missing Integer](#(7/23/18)-problem-4)
   * [Problem 5: Closure Pair](#(7/24/18)-problem-5)
   * [Problem 6: XOR Linked List](#(7/24/18)-problem-6)
+  * [Problem 7: Rotate Linked List K Places](#(10/4/19))
 
 ## Amazon Coding Interview Question - Recursive Staircase Problem
 
@@ -234,3 +235,10 @@ An XOR linked list is a more memory efficient doubly linked list. Instead of eac
 If using a language that has no pointers (such as Python), you can assume you have access to get_pointer and dereference_pointer functions that converts between nodes and memory addresses.
 
 [Return To Top](#go-to)
+
+### (10/4/2019) Problem 7
+
+Given the linked list and a positive integer k, rotate the list to the right by k places. For example given the linked list 7 -> 7 -> 3 -> 5 and k=2 it should become 3 -> 5 -> 7 -> 7
+
+Given the linked list 1 -> 2 -> 3 -> 4 -> 5 and k = 3, it should become 3 -> 4 -> 5 -> 1 -> 2.
+
