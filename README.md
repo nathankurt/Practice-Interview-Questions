@@ -13,7 +13,7 @@ te
   * [Problem 4: Find Missing Integer](#(7/23/18)-problem-4)
   * [Problem 5: Closure Pair](#(7/24/18)-problem-5)
   * [Problem 6: XOR Linked List](#(7/24/18)-problem-6)
-  * [Problem 7: Rotate Linked List K Places](#(10/4/19))
+  * [Problem 7: Rotate Linked List K Places](#(10/4/19)-problem-7)
 
 ## Amazon Coding Interview Question - Recursive Staircase Problem
 
@@ -259,3 +259,5 @@ We can accomplish this by using fast and slow pointers.
 The basic idea is this. First, advance the fast pointer k steps ahead. Then move the fast and slow pointers together until the fast one hits the end first.
 
 However, to handle the case where k is larger than the length of the linked list itself, we first get the length of the linked list first n, and check k % n first.
+
+[Return To Top](#go-to)
